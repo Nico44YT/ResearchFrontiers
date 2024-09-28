@@ -1,17 +1,13 @@
 package nazario.researchfrontiers.research;
 
+import nazario.researchfrontiers.ResearchFrontiers;
 import nazario.researchfrontiers.util.DrawHelper;
-import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
-import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ElementDrawer {
-    private static final Identifier FRAME_TEXTURE = Identifier.of("researchfrontiers:textures/gui/element_frame.png");
+    private static final Identifier FRAME_TEXTURE = ResearchFrontiers.id("textures/gui/element_frame.png");
 
     public static void draw(DrawContext context, int x, int y) {
 

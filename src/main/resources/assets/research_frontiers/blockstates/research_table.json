@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "research_frontiers:block/research_table",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "research_frontiers:block/research_table",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "research_frontiers:block/research_table"
+    },
+    "facing=west": {
+      "model": "research_frontiers:block/research_table",
+      "y": 90
+    }
+  }
+}

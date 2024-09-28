@@ -20,6 +20,14 @@ repositories {
         name 'Gegy'
         url 'https://maven.gegy.dev'
     }
+
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroup("software.bernie.geckolib")
+        }
+    }
 }
 
 dependencies {
@@ -40,6 +48,8 @@ dependencies {
     modApi("com.terraformersmc:modmenu:${project.mod_menu_version}")
 
     include(modImplementation("dev.lambdaurora:spruceui:${project.spruceui_version}"))
+
+    modImplementation "software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}"
 }
 
 processResources {

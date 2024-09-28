@@ -1,5 +1,6 @@
 package nazario.researchfrontiers.research;
 
+import nazario.researchfrontiers.ResearchFrontiers;
 import nazario.researchfrontiers.util.DrawHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
@@ -28,8 +29,6 @@ import org.joml.Vector2i;
 import java.util.Optional;
 
 public class Element {
-    private static final Identifier FRAME_TEXTURE = Identifier.of("researchfrontiers:textures/gui/element_frame.png");
-
     public int index;
     public Item item;
     public String initials;

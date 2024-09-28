@@ -114,9 +114,7 @@ public class DrawHelper {
         context.disableScissor();
     }
 
-    public static void drawEntity(
-            DrawContext context, float x, float y, float size, Vector3f vector3f, Quaternionf quaternionf, @Nullable Quaternionf quaternionf2, Entity entity
-    ) {
+    public static void drawEntity(DrawContext context, float x, float y, float size, Vector3f vector3f, Quaternionf quaternionf, @Nullable Quaternionf quaternionf2, Entity entity) {
         context.getMatrices().push();
         context.getMatrices().translate((double)x, (double)y, 50.0);
         context.getMatrices().scale(size, size, -size);
