@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "researchfrontiers",
+  "version": "${version}",
+  "name": "ResearchFrontiers",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/ResearchFrontiers"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/researchfrontiers/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "nazario.researchfrontiers.client.ResearchFrontiersClient"
+    ],
+    "main": [
+      "nazario.researchfrontiers.ResearchFrontiers"
+    ]
+  },
+  "mixins": [
+    "researchfrontiers.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
