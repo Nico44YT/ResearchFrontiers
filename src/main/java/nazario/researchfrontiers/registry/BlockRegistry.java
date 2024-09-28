@@ -2,6 +2,7 @@ package nazario.researchfrontiers.registry;
 
 import nazario.researchfrontiers.ResearchFrontiers;
 import nazario.researchfrontiers.block.ResearchTable;
+import nazario.researchfrontiers.block.WorkbenchBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityType;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.AbstractBlock;
@@ -15,6 +16,7 @@ import net.minecraft.registry.Registry;
 public class BlockRegistry {
 
     public static Block RESEARCH_TABLE = registerBlock("research_table", new ResearchTable(AbstractBlock.Settings.create()), new Item.Settings());
+    public static Block WORKBENCH = registerBlock("workbench", new WorkbenchBlock(AbstractBlock.Settings.create()), new Item.Settings());
 
     private static Block registerBlock(String name, Block block) {
         return Registry.register(Registries.BLOCK, ResearchFrontiers.id(name), block);
