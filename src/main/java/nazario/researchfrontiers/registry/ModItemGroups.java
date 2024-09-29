@@ -12,19 +12,27 @@ import net.minecraft.util.Identifier;
 
 
 public class ModItemGroups {
-    public static final ItemGroup TEST_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(ResearchFrontiers.MOD_ID, "test_items"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(Items.DIAMOND))
-                    .displayName(Text.literal("Test"))
+    public static final ItemGroup RESOURCE_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(ResearchFrontiers.MOD_ID, "resource"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ItemRegistry.STEEL_INGOT))
+                    .displayName(Text.literal("Resources"))
                             .entries((displayContext, entries) -> {
-                                entries.add(Items.DIAMOND);
-
-
+                                entries.add(ItemRegistry.STEEL_INGOT);
+                                entries.add(ItemRegistry.FIRE_CLAY_BRICK);
                             }).build());
 
 
+    public static final ItemGroup MACHINES_GROUP = Registry.register(Registries.ITEM_GROUP,
+            ResearchFrontiers.id("machines"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(BlockRegistry.RESEARCH_TABLE))
+                    .displayName(Text.literal("Machines"))
+                    .entries((ctx, entries) -> {
+                        entries.add(BlockRegistry.BLAST_FURNACE);
+                        entries.add(BlockRegistry.RESEARCH_TABLE);
+                        entries.add(BlockRegistry.WORKBENCH);
+                    }).build()
+            );
 
    public static void registerItemGroups() {
-
    }
 }

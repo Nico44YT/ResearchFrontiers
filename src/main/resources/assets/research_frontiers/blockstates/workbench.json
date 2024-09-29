@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "side=left,facing=north": {
+      "model": "research_frontiers:block/workbench",
+      "y": 180
+    },
+    "side=left,facing=south": {
+      "model": "research_frontiers:block/workbench"
+    },
+    "side=left,facing=west": {
+      "model": "research_frontiers:block/workbench",
+      "y": 90
+    },
+    "side=left,facing=east": {
+      "model": "research_frontiers:block/workbench",
+      "y": 270
+    },
+    "side=right": {
+      "model": "research_frontiers:block/workbench"
+    }
+  }
+}

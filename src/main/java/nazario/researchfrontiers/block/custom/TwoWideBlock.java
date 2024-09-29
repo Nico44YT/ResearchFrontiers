@@ -85,7 +85,7 @@ public abstract class TwoWideBlock extends HorizontalFacingBlock {
     protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         Direction facing = state.get(FACING).rotateYClockwise();
 
-        if (state.get(SIDE).equals(TwoWideBlockSide.LEFT)) {
+        if(state.get(SIDE).equals(TwoWideBlockSide.LEFT)) {
             world.setBlockState(pos.offset(facing), Blocks.AIR.getDefaultState());
         } else {
             world.setBlockState(pos.offset(facing.getOpposite()), Blocks.AIR.getDefaultState());
@@ -102,7 +102,4 @@ public abstract class TwoWideBlock extends HorizontalFacingBlock {
     protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
         return null;
     }
-
-
-
 }

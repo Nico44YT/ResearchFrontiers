@@ -1,4 +1,4 @@
-package nazario.researchfrontiers.items;
+package nazario.researchfrontiers.item;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
