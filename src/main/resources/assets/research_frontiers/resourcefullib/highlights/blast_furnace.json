@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "highlight": "research_frontiers:blast_furnace_shape",
+      "y": 90
+    },
+    "facing=north": {
+      "highlight": "research_frontiers:blast_furnace_shape",
+      "y": 90
+    },
+    "facing=south": {
       "highlight": "research_frontiers:blast_furnace_shape"
+    },
+    "facing=west": {
+      "highlight": "research_frontiers:blast_furnace_shape",
+      "y": 90
     }
   }
 }

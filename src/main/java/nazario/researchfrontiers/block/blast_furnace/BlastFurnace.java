@@ -9,13 +9,17 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.EnumProperty;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockRenderView;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -40,6 +44,7 @@ public class BlastFurnace extends BlockWithEntity {
     public static final MapCodec<BlastFurnace> CODEC = createCodec(BlastFurnace::new);
 
 
+    public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final EnumProperty<BlastFurnaceState> OPEN = EnumProperty.of("door", BlastFurnaceState.class);
 
     public BlastFurnace(Settings settings) {
@@ -57,7 +62,7 @@ public class BlastFurnace extends BlockWithEntity {
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         // Ensure the block is placed with OPEN set to false
-        return this.getDefaultState().with(OPEN, BlastFurnaceState.CLOSED);
+        return this.getDefaultState().with(OPEN, BlastFurnaceState.CLOSED).with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
     }
 
     @Override
@@ -89,11 +94,16 @@ public class BlastFurnace extends BlockWithEntity {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(OPEN);
+        builder.add(OPEN, FACING);
     }
 
     @Override
-    protected float getAmbientOcclusionLightLevel(BlockState state, BlockView world, BlockPos pos) {
-        return 1f;
+    public BlockState getAppearance(BlockState state, BlockRenderView renderView, BlockPos pos, Direction side, @Nullable BlockState sourceState, @Nullable BlockPos sourcePos) {
+        return this.getDefaultState().with(FACING, HorizontalFacingBlock.DIRECTIONS[0]);
+    }
+
+    @Override
+    protected BlockState rotate(BlockState state, BlockRotation rotation) {
+        return state.with(FACING, rotation.rotate(state.get(FACING)));
     }
 }

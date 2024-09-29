@@ -1,6 +1,7 @@
 package nazario.researchfrontiers.registry;
 
 import nazario.researchfrontiers.ResearchFrontiers;
+import nazario.researchfrontiers.item.BlastFurnaceItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -8,6 +9,7 @@ import net.minecraft.registry.Registry;
 public class ItemRegistry {
 
     public static Item FIRE_CLAY_BRICK = registerSimpleItem("fire_clay_brick", 16);
+    public static Item BLAST_FURNACE_ITEM = registerItem("blast_furnace", new BlastFurnaceItem(new Item.Settings()));
 
 
     public static Item registerItem(String name, Item item) {
