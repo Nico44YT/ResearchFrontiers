@@ -2,6 +2,7 @@
 	"format_version": "1.8.0",
 	"animations": {
 		"animation.furnace.open": {
+			"loop": "hold_on_last_frame",
 			"animation_length": 1.5,
 			"bones": {
 				"door": {
@@ -15,22 +16,28 @@
 							"easing": "easeOutElastic",
 							"easingArgs": []
 						}
-					},
-					"position": {
-						"0.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
-						},
-						"1.0": {
-							"vector": [0, 0, 0],
-							"easing": "linear"
-						}
 					}
 				}
 			}
 		},
-		"animation.furnace.idle": {
-			"loop": true
+		"animation.furnace.close": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+				"door": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 145, 0],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 0],
+							"easing": "easeInElastic",
+							"easingArgs": []
+						}
+					}
+				}
+			}
 		}
 	},
 	"geckolib_format_version": 2
