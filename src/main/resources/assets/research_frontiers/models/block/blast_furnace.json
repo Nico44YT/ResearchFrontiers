@@ -2,7 +2,7 @@
 	"credit": "Nico_44",
 	"textures": {
 		"0": "research_frontiers:block/blast_furnace",
-		"particle": "research_frontiers:block/blast_furnace"
+		"particle": "research_frontiers:block/fire_clay_bricks"
 	},
 	"elements": [
 	],

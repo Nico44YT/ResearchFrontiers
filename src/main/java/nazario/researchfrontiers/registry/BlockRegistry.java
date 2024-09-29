@@ -16,7 +16,7 @@ public class BlockRegistry {
     public static Block RESEARCH_TABLE = registerBlock("research_table", new ResearchTable(AbstractBlock.Settings.create()), new Item.Settings());
     public static Block WORKBENCH = registerBlock("workbench", new WorkbenchBlock(AbstractBlock.Settings.create()), new Item.Settings());
 
-    public static Block BLAST_FURNACE = registerBlock("blast_furnace", new BlastFurnace(AbstractBlock.Settings.create()));
+    public static Block BLAST_FURNACE = registerBlock("blast_furnace", new BlastFurnace(AbstractBlock.Settings.create()), new Item.Settings());
 
 
     private static Block registerBlock(String name, Block block) {

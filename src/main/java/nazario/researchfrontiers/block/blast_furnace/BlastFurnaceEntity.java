@@ -14,9 +14,13 @@ import software.bernie.geckolib.util.RenderUtil;
 public class BlastFurnaceEntity extends BlockEntity implements GeoBlockEntity {
 
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
+    private BlockState prevState;
+
+    private boolean initAnim = false;
 
     public BlastFurnaceEntity(BlockPos pos, BlockState state) {
         super(BlockEntityRegistry.BLAST_FURNACE_ENTITY, pos, state);
+        prevState = state;
     }
 
     @Override
@@ -25,7 +29,28 @@ public class BlastFurnaceEntity extends BlockEntity implements GeoBlockEntity {
     }
 
     private <T extends GeoAnimatable> PlayState predicate(AnimationState<T> tAnimationState) {
-        //tAnimationState.getController().setAnimation(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
+        try{
+            BlockState state = world.getBlockState(pos);
+
+            if(!initAnim) {
+                switch(state.get(BlastFurnace.OPEN)) {
+                    case OPEN -> tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.furnace.open", Animation.LoopType.HOLD_ON_LAST_FRAME));
+                    case CLOSED -> tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.furnace.close", Animation.LoopType.HOLD_ON_LAST_FRAME));
+                }
+
+                initAnim = true;
+            }
+
+            if(!state.get(BlastFurnace.OPEN).equals(prevState.get(BlastFurnace.OPEN))) {
+                switch(state.get(BlastFurnace.OPEN)) {
+                    case OPEN -> tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.furnace.open", Animation.LoopType.HOLD_ON_LAST_FRAME));
+                    case CLOSED -> tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.furnace.close", Animation.LoopType.HOLD_ON_LAST_FRAME));
+                }
+
+                prevState = state;
+            }
+        }catch (Exception ignore) {};
+
         return PlayState.CONTINUE;
     }
 

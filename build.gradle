@@ -28,6 +28,8 @@ repositories {
             includeGroup("software.bernie.geckolib")
         }
     }
+
+    maven { url = "https://maven.resourcefulbees.com/repository/maven-public/" }
 }
 
 dependencies {
@@ -50,6 +52,8 @@ dependencies {
     include(modImplementation("dev.lambdaurora:spruceui:${project.spruceui_version}"))
 
     modImplementation "software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}"
+
+    modImplementation "com.teamresourceful.resourcefullib:resourcefullib-fabric-1.21:3.0.10"
 }
 
 processResources {
@@ -81,7 +85,7 @@ loom {
 }
 sourceSets { main { resources { srcDirs + dataOutput } } }
 
-def targetJavaVersion = 17
+def targetJavaVersion = 21
 tasks.withType(JavaCompile).configureEach {
     // ensure that the encoding is set to UTF-8, no matter what the system default is
     // this fixes some edge cases with special characters not displaying correctly
