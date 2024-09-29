@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "researchfrontiers",
+  "id": "research_frontiers",
   "version": "${version}",
   "name": "ResearchFrontiers",
   "description": "",
@@ -17,6 +17,9 @@
     ],
     "main": [
       "nazario.researchfrontiers.ResearchFrontiers"
+    ],
+    "fabric-datagen": [
+      "nazario.researchfrontiers.datagen.DataGenerator"
     ]
   },
   "mixins": [

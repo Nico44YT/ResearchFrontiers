@@ -1,11 +1,13 @@
 package nazario.researchfrontiers;
 
 import nazario.researchfrontiers.events.ServerConnectionEvents;
+import nazario.researchfrontiers.registry.BlockEntityRegistry;
 import nazario.researchfrontiers.registry.BlockRegistry;
 import nazario.researchfrontiers.registry.ItemRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.minecraft.util.Identifier;
+import software.bernie.geckolib.GeckoLib;
 
 public class ResearchFrontiers implements ModInitializer {
 
@@ -13,8 +15,9 @@ public class ResearchFrontiers implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        BlockRegistry.register();
         ItemRegistry.register();
+        BlockRegistry.register();
+        BlockEntityRegistry.register();
 
         ServerPlayConnectionEvents.JOIN.register(ServerConnectionEvents.JOIN_EVENT.invoker());
         ServerPlayConnectionEvents.DISCONNECT.register(ServerConnectionEvents.LEAVE_EVENT.invoker());

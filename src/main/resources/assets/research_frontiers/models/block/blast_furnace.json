@@ -1,0 +1,39 @@
+{
+	"credit": "Nico_44",
+	"textures": {
+		"0": "research_frontiers:block/blast_furnace",
+		"particle": "research_frontiers:block/blast_furnace"
+	},
+	"elements": [
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"firstperson_righthand": {
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"firstperson_lefthand": {
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"ground": {
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"gui": {
+			"rotation": [30, 45, 0],
+			"translation": [0, -0.25, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 0, 1],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": []
+}

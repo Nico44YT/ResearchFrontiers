@@ -2,6 +2,7 @@ package nazario.researchfrontiers.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
@@ -24,6 +25,8 @@ public abstract class TwoWideBlock extends HorizontalFacingBlock {
 
     public TwoWideBlock(Settings settings) {
         super(settings);
+
+        settings.pistonBehavior(PistonBehavior.BLOCK);
     }
 
 
@@ -99,5 +102,7 @@ public abstract class TwoWideBlock extends HorizontalFacingBlock {
     protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
         return null;
     }
+
+
 
 }
