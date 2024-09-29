@@ -1,7 +1,6 @@
 package nazario.researchfrontiers.block.blast_furnace.client;
 
 import nazario.researchfrontiers.ResearchFrontiers;
-import nazario.researchfrontiers.block.blast_furnace.BlastFurnace;
 import nazario.researchfrontiers.block.blast_furnace.BlastFurnaceEntity;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib.model.GeoModel;
