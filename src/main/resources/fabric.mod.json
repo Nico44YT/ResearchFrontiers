@@ -4,7 +4,9 @@
   "version": "${version}",
   "name": "ResearchFrontiers",
   "description": "",
-  "authors": [],
+  "authors": [
+    "Dein Name"
+  ],
   "contact": {
     "repo": "https://github.com/ResearchFrontiers"
   },

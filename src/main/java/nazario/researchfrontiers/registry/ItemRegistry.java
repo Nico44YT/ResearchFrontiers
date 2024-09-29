@@ -9,7 +9,6 @@ public class ItemRegistry {
 
     public static Item FIRE_CLAY_BRICK = registerSimpleItem("fire_clay_brick", 16);
 
-
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, ResearchFrontiers.id(name), item);
     }
