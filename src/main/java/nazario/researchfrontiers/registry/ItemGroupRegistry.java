@@ -12,9 +12,9 @@ import net.minecraft.util.Identifier;
 
 public class ItemGroupRegistry {
     public static final ItemGroup RESOURCE_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(ResearchFrontiers.MOD_ID, "resource"),
+            ResearchFrontiers.id("resource"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ItemRegistry.STEEL_INGOT))
-                    .displayName(Text.literal("Resources"))
+                    .displayName(Text.translatable("itemGroup.research_frontiers.resources"))
                             .entries((displayContext, entries) -> {
                                 entries.add(ItemRegistry.STEEL_INGOT);
                                 entries.add(ItemRegistry.FIRE_CLAY_BRICK);
@@ -26,7 +26,7 @@ public class ItemGroupRegistry {
     public static final ItemGroup MACHINES_GROUP = Registry.register(Registries.ITEM_GROUP,
             ResearchFrontiers.id("machines"),
             FabricItemGroup.builder().icon(() -> new ItemStack(BlockRegistry.RESEARCH_TABLE))
-                    .displayName(Text.literal("Machines"))
+                    .displayName(Text.translatable("itemGroup.research_frontiers.machines"))
                     .entries((ctx, entries) -> {
                         entries.add(BlockRegistry.BLAST_FURNACE);
                         entries.add(BlockRegistry.RESEARCH_TABLE);
@@ -37,11 +37,12 @@ public class ItemGroupRegistry {
     public static final ItemGroup BUILDING_GROUP = Registry.register(Registries.ITEM_GROUP,
             ResearchFrontiers.id("building"),
             FabricItemGroup.builder().icon(() -> new ItemStack(BlockRegistry.FIRE_CLAY_BRICKS))
-                    .displayName(Text.literal("Building Blocks"))
+                    .displayName(Text.translatable("itemGroup.research_frontiers.building"))
                     .entries((ctx, entries) -> {
                         entries.add(BlockRegistry.FIRE_CLAY_BRICKS);
                         entries.add(BlockRegistry.FIRE_CLAY_BRICKS_STAIRS);
-                        entries.add(BlockRegistry.FIRE_CLAY_BRICKS_SLABS);
+                        entries.add(BlockRegistry.FIRE_CLAY_BRICKS_SLAB);
+                        entries.add(BlockRegistry.FIRE_CLAY_BRICKS_WALL);
                     }).build()
     );
 

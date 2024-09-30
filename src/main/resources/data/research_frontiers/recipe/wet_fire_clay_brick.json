@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "IiI",
+        "iIi",
+        "IiI"
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:clay_ball"
+        },
+        "i": {
+            "item": "minecraft:iron_nugget"
+        }
+    },
+    "result": {
+        "id": "research_frontiers:wet_fire_clay_brick",
+        "count": 1
+    }
+}

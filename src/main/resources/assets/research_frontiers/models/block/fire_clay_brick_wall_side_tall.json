@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side_tall",
+  "textures": {
+    "wall": "research_frontiers:block/fire_clay_bricks"
+  }
+}

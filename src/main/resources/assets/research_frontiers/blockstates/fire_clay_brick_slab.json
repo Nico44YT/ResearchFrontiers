@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "research_frontiers:block/fire_clay_brick_slabs"
+      "model": "research_frontiers:block/fire_clay_brick_slab"
     },
     "type=double": {
       "model": "research_frontiers:block/fire_clay_bricks"
     },
     "type=top": {
-      "model": "research_frontiers:block/fire_clay_brick_slabs_top"
+      "model": "research_frontiers:block/fire_clay_brick_slab_top"
     }
   }
 }

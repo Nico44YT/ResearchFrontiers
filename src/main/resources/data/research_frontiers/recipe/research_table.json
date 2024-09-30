@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_",
+        "U"
+    ],
+    "key": {
+        "_": {
+            "item": "minecraft:paper"
+        },
+        "U": {
+            "item": "minecraft:crafting_table"
+        }
+    },
+    "result": {
+        "id": "research_frontiers:research_table",
+        "count": 1
+    }
+}

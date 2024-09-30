@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "___",
+        "SUS"
+    ],
+    "key": {
+        "_": {
+            "item": "minecraft:spruce_slab"
+        },
+        "S": {
+            "item": "minecraft:spruce_log"
+        },
+        "U": {
+            "item": "minecraft:spruce_trapdoor"
+        }
+    },
+    "result": {
+        "id": "research_frontiers:workbench",
+        "count": 1
+    }
+}

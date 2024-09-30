@@ -1,0 +1,21 @@
+{
+  "itemGroup.research_frontiers.resources": "Resources",
+  "itemGroup.research_frontiers.machines": "Machines",
+  "itemGroup.research_frontiers.building": "Building",
+
+  "block.research_frontiers.fire_clay_bricks": "Fire Clay Bricks",
+  "block.research_frontiers.fire_clay_brick_slab": "Fire Clay Brick Slab",
+  "block.research_frontiers.fire_clay_brick_stairs": "Fire Clay Brick Stairs",
+  "block.research_frontiers.fire_clay_brick_wall": "Fire Clay Brick Wall",
+
+  "block.research_frontiers.research_table": "Research Table",
+  "block.research_frontiers.workbench": "Workbench",
+  "block.research_frontiers.blast_furnace": "Blast Furnace",
+
+  "block.research_frontiers.wet_fire_clay_brick": "Wet Fire Clay Brick",
+
+
+  "item.research_frontiers.steel_ingot": "Steel Ingot",
+  "item.research_frontiers.fire_clay_brick": "Fire Clay Brick",
+  "item.research_frontiers.lithium": "Lithium"
+}

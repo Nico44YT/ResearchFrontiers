@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "research_frontiers:block/fire_clay_bricks"
+  }
+}

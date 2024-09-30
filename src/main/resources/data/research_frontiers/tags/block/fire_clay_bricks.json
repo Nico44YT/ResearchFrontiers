@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "research_frontiers:fire_clay_bricks",
+    "research_frontiers:fire_clay_brick_slab",
+    "research_frontiers:fire_clay_brick_stairs",
+    "research_frontiers:fire_clay_brick_wall"
+  ]
+}

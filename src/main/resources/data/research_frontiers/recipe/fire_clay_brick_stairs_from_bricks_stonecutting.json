@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "research_frontiers:fire_clay_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "research_frontiers:fire_clay_brick_stairs"
+  }
+}
