@@ -1,54 +1,6 @@
 {
-  "credit": "Let's Code, Nico_44",
-  "parent": "builtin/entity",
-  "texture_size": [
-    128,
-    128
-  ],
-  "display": {
-    "thirdperson_righthand": {
-      "rotation": [
-        0,
-        45,
-        0
-      ],
-      "scale": [
-        0.3,
-        0.3,
-        0.3
-      ]
-    },
-    "thirdperson_lefthand": {
-      "rotation": [
-        0,
-        45,
-        0
-      ],
-      "scale": [
-        0.3,
-        0.3,
-        0.3
-      ]
-    },
-    "gui": {
-      "rotation": [
-        30,
-        135,
-        0
-      ],
-      "translation": [
-        0,
-        1.25,
-        0
-      ],
-      "scale": [
-        0.7,
-        0.7,
-        0.7
-      ]
-    }
-  },
+  "parent": "minecraft:item/generated",
   "textures": {
-    "particle": "blast_furnace"
+    "layer0": "research_frontiers:item/blast_furnace"
   }
 }

@@ -22,7 +22,7 @@ public class BlockRegistry {
 
     public static Block BLAST_FURNACE = registerBlock("blast_furnace", new BlastFurnace(AbstractBlock.Settings.copy(Blocks.COBBLESTONE)), new Item.Settings());
 
-    public static Block WET_FIRE_CLAY_BRICK = registerBlock("wet_fire_clay_brick", new WetFireClayBrickBlock(AbstractBlock.Settings.create()), new Item.Settings());
+    public static Block WET_FIRE_CLAY_BRICK = registerBlock("wet_fire_clay_brick", new WetFireClayBrickBlock(AbstractBlock.Settings.copy(Blocks.WET_SPONGE).strength(0.1f, 0.1f)), new Item.Settings());
 
     private static Block registerBlock(String name, Block block) {
         return Registry.register(Registries.BLOCK, ResearchFrontiers.id(name), block);
