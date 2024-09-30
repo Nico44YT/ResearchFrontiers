@@ -1,19 +1,28 @@
 {
   "variants": {
-    "facing=east": {
-      "highlight": "research_frontiers:blast_furnace_shape",
-      "y": 90
-    },
     "facing=north": {
       "highlight": "research_frontiers:blast_furnace_shape",
-      "y": 90
+      "rotation": {
+        "y": 0
+      }
+    },
+    "facing=east": {
+      "highlight": "research_frontiers:blast_furnace_shape",
+      "rotation": {
+        "y": 90
+      }
     },
     "facing=south": {
-      "highlight": "research_frontiers:blast_furnace_shape"
+      "highlight": "research_frontiers:blast_furnace_shape",
+      "rotation": {
+        "y": 180
+      }
     },
     "facing=west": {
       "highlight": "research_frontiers:blast_furnace_shape",
-      "y": 90
+      "rotation": {
+        "y": 270
+      }
     }
   }
 }

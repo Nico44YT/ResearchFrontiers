@@ -1,0 +1,22 @@
+{
+	"credit": "Nico_44",
+	"textures": {
+		"0": "research_frontiers:block/wet_fire_clay_brick_1",
+		"particle": "research_frontiers:block/wet_fire_clay_brick_1"
+	},
+	"elements": [
+		{
+			"from": [6, 0, 4],
+			"to": [10, 3, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 4]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 3], "texture": "#0"},
+				"east": {"uv": [0, 0, 8, 3], "texture": "#0"},
+				"south": {"uv": [0, 0, 4, 3], "texture": "#0"},
+				"west": {"uv": [0, 0, 8, 3], "texture": "#0"},
+				"up": {"uv": [0, 0, 4, 8], "texture": "#0"},
+				"down": {"uv": [0, 0, 4, 8], "texture": "#0"}
+			}
+		}
+	]
+}

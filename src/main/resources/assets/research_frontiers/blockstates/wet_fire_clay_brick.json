@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "research_frontiers:block/wet_fire_clay_brick_0"
+    },
+    "stage=1": {
+      "model": "research_frontiers:block/wet_fire_clay_brick_1"
+    },
+    "stage=2": {
+      "model": "research_frontiers:block/wet_fire_clay_brick_2"
+    },
+    "stage=3": {
+      "model": "research_frontiers:block/wet_fire_clay_brick_3"
+    }
+  }
+}

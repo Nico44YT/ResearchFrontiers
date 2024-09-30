@@ -1,5 +1,6 @@
 package nazario.researchfrontiers.mixin;
 
+import nazario.researchfrontiers.item.WaterReactiveItem;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.world.World;
@@ -25,6 +26,8 @@ public abstract class ItemEntityMixin {
         World world = itemEntity.getWorld();
         BlockPos itemPos = itemEntity.getBlockPos();
 
+        if(!(itemEntity.getStack().getItem() instanceof WaterReactiveItem)) return;
+
         // Check if the item is in water
         if (world.isWater(itemPos)) {
             isInWater = true;
@@ -34,6 +37,8 @@ public abstract class ItemEntityMixin {
                 isBurning = true;
                 tickCounter = 0; // reset timer
                 explosionTime = new Random().nextInt(3) + 2; // generate a random time between 2 and 5 seconds
+
+                itemEntity.setPickupDelayInfinite();
             }
 
             // Make the item swim on the water's surface
