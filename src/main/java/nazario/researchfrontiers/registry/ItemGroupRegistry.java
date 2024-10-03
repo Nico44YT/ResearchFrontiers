@@ -1,5 +1,7 @@
 package nazario.researchfrontiers.registry;
 
+import nazario.liby.registry.LibyItemGroupRegister;
+import nazario.liby.registry.LibyRegistry;
 import nazario.researchfrontiers.ResearchFrontiers;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -7,21 +9,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 
 
-public class ItemGroupRegistry {
-    public static final ItemGroup RESOURCE_GROUP = Registry.register(Registries.ITEM_GROUP,
-            ResearchFrontiers.id("resource"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ItemRegistry.STEEL_INGOT))
-                    .displayName(Text.translatable("itemGroup.research_frontiers.resources"))
-                            .entries((displayContext, entries) -> {
-                                entries.add(ItemRegistry.STEEL_INGOT);
-                                entries.add(ItemRegistry.FIRE_CLAY_BRICK);
-                                entries.add(ItemRegistry.LITHIUM);
-                                entries.add(BlockRegistry.WET_FIRE_CLAY_BRICK);
-                            }).build());
+public class ItemGroupRegistry implements LibyRegistry {
 
+    public static final LibyItemGroupRegister REGISTER = new LibyItemGroupRegister(ResearchFrontiers.MOD_ID);
+
+    public static final ItemGroup RESOURCE_GROUP = REGISTER.registerItemGroup("resource", ItemRegistry.STEEL_INGOT, Text.translatable("itemGroup.research_frontiers.resources"),
+            ItemRegistry.STEEL_INGOT,
+            ItemRegistry.FIRE_CLAY_BRICK,
+            ItemRegistry.LITHIUM,
+            BlockRegistry.WET_FIRE_CLAY_BRICK
+    );
 
     public static final ItemGroup MACHINES_GROUP = Registry.register(Registries.ITEM_GROUP,
             ResearchFrontiers.id("machines"),

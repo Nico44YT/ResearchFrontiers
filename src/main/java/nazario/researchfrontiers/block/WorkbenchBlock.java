@@ -3,7 +3,7 @@ package nazario.researchfrontiers.block;
 import com.mojang.serialization.MapCodec;
 import nazario.researchfrontiers.block.custom.TwoWideBlock;
 import nazario.researchfrontiers.block.custom.TwoWideBlockSide;
-import nazario.researchfrontiers.util.VoxelUtil;
+import nazario.liby.util.LibyVoxelUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
@@ -55,6 +55,6 @@ public class WorkbenchBlock extends TwoWideBlock {
             case EAST -> 270;
         };
 
-        return VoxelUtil.rotate(state.get(SIDE).equals(TwoWideBlockSide.LEFT) ? LEFT_SHAPE : RIGHT_SHAPE, rotation);
+        return LibyVoxelUtil.rotate(state.get(SIDE).equals(TwoWideBlockSide.LEFT) ? LEFT_SHAPE : RIGHT_SHAPE, rotation);
     }
 }

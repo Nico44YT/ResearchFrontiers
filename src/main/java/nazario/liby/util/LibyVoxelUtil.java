@@ -1,15 +1,10 @@
-package nazario.researchfrontiers.util;
+package nazario.liby.util;
 
-import net.minecraft.block.Block;
-import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.math.Box;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 
-import java.util.stream.Stream;
-
-public class VoxelUtil {
+public class LibyVoxelUtil {
     /**
      * Rotates a VoxelShape by the given degrees (must be 0, 90, 180, or 270).
      * @param shape The VoxelShape to rotate.

@@ -1,4 +1,4 @@
-package nazario.researchfrontiers.util;
+package nazario.liby.util;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.MinecraftClient;
@@ -18,7 +18,7 @@ import org.joml.Matrix4f;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
-public class DrawHelper {
+public class LibyDrawHelper {
     public static void drawItem(DrawContext context, @Nullable LivingEntity entity, @Nullable World world, ItemStack stack, int x, int y, int z, int seed, float scale) {
         drawItem(context, entity, world, stack, x, y, z, seed, 15728880, scale, scale, scale);
     }

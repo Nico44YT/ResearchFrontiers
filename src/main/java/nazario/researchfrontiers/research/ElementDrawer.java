@@ -1,7 +1,7 @@
 package nazario.researchfrontiers.research;
 
 import nazario.researchfrontiers.ResearchFrontiers;
-import nazario.researchfrontiers.util.DrawHelper;
+import nazario.liby.util.LibyDrawHelper;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -21,7 +21,7 @@ public class ElementDrawer {
 
 
         if(element.item != null) {
-            DrawHelper.drawItem(context, null, null, new ItemStack(element.item), x + element.position.x, y + element.position.y, 0, 0, 12);
+            LibyDrawHelper.drawItem(context, null, null, new ItemStack(element.item), x + element.position.x, y + element.position.y, 0, 0, 12);
         }
 
 

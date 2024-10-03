@@ -6,15 +6,11 @@ import nazario.researchfrontiers.ResearchFrontiers;
 import nazario.researchfrontiers.research.Element;
 import nazario.researchfrontiers.research.ElementDrawer;
 import nazario.researchfrontiers.research.Elements;
-import nazario.researchfrontiers.util.DrawHelper;
+import nazario.liby.util.LibyDrawHelper;
 import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.gui.screen.advancement.AdvancementsScreen;
-import net.minecraft.client.gui.screen.ingame.InventoryScreen;
 import net.minecraft.client.gui.widget.ThreePartsLayoutWidget;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
-import net.minecraft.entity.decoration.ArmorStandEntity;
-import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.text.Text;
@@ -81,7 +77,7 @@ public class ResearchScreen extends SpruceScreen {
 
                 this.entity.setBodyYaw(roX++);
 
-                DrawHelper.drawEntity(context, x+15, y+30, x+107,y+150 ,100,0f, 0, 0, entity);
+                LibyDrawHelper.drawEntity(context, x+15, y+30, x+107,y+150 ,100,0f, 0, 0, entity);
             }
         }
     }
