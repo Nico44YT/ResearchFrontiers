@@ -3,11 +3,8 @@ package nazario.researchfrontiers.registry;
 import nazario.liby.registry.auto.LibyAutoRegister;
 import nazario.liby.registry.helper.LibyBlockRegister;
 import nazario.researchfrontiers.ResearchFrontiers;
-import nazario.researchfrontiers.block.Cable;
-import nazario.researchfrontiers.block.WetFireClayBrickBlock;
+import nazario.researchfrontiers.block.*;
 import nazario.researchfrontiers.block.blast_furnace.BlastFurnace;
-import nazario.researchfrontiers.block.ResearchTable;
-import nazario.researchfrontiers.block.WorkbenchBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.Item;
 
@@ -30,9 +27,7 @@ public class BlockRegistry {
 
     public static Block WET_FIRE_CLAY_BRICK = REGISTER.registerBlock("wet_fire_clay_brick", new WetFireClayBrickBlock(AbstractBlock.Settings.copy(Blocks.WET_SPONGE).strength(0.1f, 0.1f)), new Item.Settings());
 
-    public static void register() {}
+    public static Block BIG_OVEN = REGISTER.registerBlock("big_oven", new BigOvenBlock(AbstractBlock.Settings.create()), new Item.Settings());
 
-    public static int getPriority() {
-        return 1;
-    }
+    public static void register() {}
 }

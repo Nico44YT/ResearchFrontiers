@@ -24,9 +24,7 @@ public abstract class TwoWideBlock extends HorizontalFacingBlock {
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
 
     public TwoWideBlock(Settings settings) {
-        super(settings);
-
-        settings.pistonBehavior(PistonBehavior.BLOCK);
+        super(settings.pistonBehavior(PistonBehavior.DESTROY));
     }
 
 
