@@ -1,7 +1,7 @@
 package nazario.researchfrontiers.registry;
 
-import nazario.liby.registry.LibyBlockRegister;
-import nazario.liby.registry.LibyRegistry;
+import nazario.liby.registry.auto.LibyAutoRegister;
+import nazario.liby.registry.helper.LibyBlockRegister;
 import nazario.researchfrontiers.ResearchFrontiers;
 import nazario.researchfrontiers.block.Cable;
 import nazario.researchfrontiers.block.WetFireClayBrickBlock;
@@ -11,11 +11,13 @@ import nazario.researchfrontiers.block.WorkbenchBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.Item;
 
-public class BlockRegistry implements LibyRegistry {
+@LibyAutoRegister(priority = 1)
+public class BlockRegistry {
 
     public static final LibyBlockRegister REGISTER = new LibyBlockRegister(ResearchFrontiers.MOD_ID);
 
     public static Block CABLE_BLOCK = REGISTER.registerBlock("cable", new Cable.Block(AbstractBlock.Settings.create()));
+
     public static Block FIRE_CLAY_BRICKS = REGISTER.registerBlock("fire_clay_bricks", new Block(AbstractBlock.Settings.copy(Blocks.BRICKS)), new Item.Settings());
     public static Block FIRE_CLAY_BRICKS_SLAB = REGISTER.registerBlock("fire_clay_brick_slab", new SlabBlock(AbstractBlock.Settings.copy(BlockRegistry.FIRE_CLAY_BRICKS).solid()), new Item.Settings());
     public static Block FIRE_CLAY_BRICKS_STAIRS = REGISTER.registerBlock("fire_clay_brick_stairs", new StairsBlock(BlockRegistry.FIRE_CLAY_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.BRICK_STAIRS)), new Item.Settings());
@@ -28,6 +30,9 @@ public class BlockRegistry implements LibyRegistry {
 
     public static Block WET_FIRE_CLAY_BRICK = REGISTER.registerBlock("wet_fire_clay_brick", new WetFireClayBrickBlock(AbstractBlock.Settings.copy(Blocks.WET_SPONGE).strength(0.1f, 0.1f)), new Item.Settings());
 
-
     public static void register() {}
+
+    public static int getPriority() {
+        return 1;
+    }
 }

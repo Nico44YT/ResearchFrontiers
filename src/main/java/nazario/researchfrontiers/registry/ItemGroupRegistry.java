@@ -1,50 +1,28 @@
 package nazario.researchfrontiers.registry;
 
-import nazario.liby.registry.LibyItemGroupRegister;
-import nazario.liby.registry.LibyRegistry;
+import nazario.liby.registry.auto.LibyAutoRegister;
+import nazario.liby.item.LibyItemGroup;
+import nazario.liby.registry.helper.LibyItemGroupRegister;
 import nazario.researchfrontiers.ResearchFrontiers;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 
 
-public class ItemGroupRegistry implements LibyRegistry {
+@LibyAutoRegister(priority = 10)
+public class ItemGroupRegistry {
 
     public static final LibyItemGroupRegister REGISTER = new LibyItemGroupRegister(ResearchFrontiers.MOD_ID);
 
-    public static final ItemGroup RESOURCE_GROUP = REGISTER.registerItemGroup("resource", ItemRegistry.STEEL_INGOT, Text.translatable("itemGroup.research_frontiers.resources"),
-            ItemRegistry.STEEL_INGOT,
-            ItemRegistry.FIRE_CLAY_BRICK,
-            ItemRegistry.LITHIUM,
-            BlockRegistry.WET_FIRE_CLAY_BRICK
-    );
+    public static final LibyItemGroup RESOURCE_GROUP = new LibyItemGroup("resource", Text.translatable("itemGroup.research_frontiers.resources"), new ItemStack(ItemRegistry.STEEL_INGOT));
+    public static final LibyItemGroup MACHINES_GROUP = new LibyItemGroup("machines", Text.translatable("itemGroup.research_frontiers.machines"), new ItemStack(BlockRegistry.BLAST_FURNACE));
+    public static final LibyItemGroup BUILDING_GROUP = new LibyItemGroup("building", Text.translatable("itemGroup.research_frontiers.building"), new ItemStack(BlockRegistry.FIRE_CLAY_BRICKS));
 
-    public static final ItemGroup MACHINES_GROUP = Registry.register(Registries.ITEM_GROUP,
-            ResearchFrontiers.id("machines"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(BlockRegistry.RESEARCH_TABLE))
-                    .displayName(Text.translatable("itemGroup.research_frontiers.machines"))
-                    .entries((ctx, entries) -> {
-                        entries.add(BlockRegistry.BLAST_FURNACE);
-                        entries.add(BlockRegistry.RESEARCH_TABLE);
-                        entries.add(BlockRegistry.WORKBENCH);
-                    }).build()
-            );
-
-    public static final ItemGroup BUILDING_GROUP = Registry.register(Registries.ITEM_GROUP,
-            ResearchFrontiers.id("building"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(BlockRegistry.FIRE_CLAY_BRICKS))
-                    .displayName(Text.translatable("itemGroup.research_frontiers.building"))
-                    .entries((ctx, entries) -> {
-                        entries.add(BlockRegistry.FIRE_CLAY_BRICKS);
-                        entries.add(BlockRegistry.FIRE_CLAY_BRICKS_STAIRS);
-                        entries.add(BlockRegistry.FIRE_CLAY_BRICKS_SLAB);
-                        entries.add(BlockRegistry.FIRE_CLAY_BRICKS_WALL);
-                    }).build()
-    );
 
    public static void register() {
+       RESOURCE_GROUP.addItem(ItemRegistry.FIRE_CLAY_BRICK, ItemRegistry.STEEL_INGOT, ItemRegistry.LITHIUM, BlockRegistry.WET_FIRE_CLAY_BRICK);
+       MACHINES_GROUP.addItem(BlockRegistry.BLAST_FURNACE, BlockRegistry.RESEARCH_TABLE, BlockRegistry.WORKBENCH);
+       BUILDING_GROUP.addItem(BlockRegistry.FIRE_CLAY_BRICKS, BlockRegistry.FIRE_CLAY_BRICKS_STAIRS, BlockRegistry.FIRE_CLAY_BRICKS_SLAB, BlockRegistry.FIRE_CLAY_BRICKS_WALL);
+
+       REGISTER.registerItemGroups(RESOURCE_GROUP, MACHINES_GROUP, BUILDING_GROUP);
    }
 }

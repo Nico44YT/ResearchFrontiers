@@ -1,6 +1,6 @@
 package nazario.researchfrontiers;
 
-import nazario.liby.registry.LibyRegistryLoader;
+import nazario.liby.registry.auto.LibyRegistryLoader;
 import nazario.researchfrontiers.events.ServerConnectionEvents;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
@@ -11,7 +11,6 @@ public class ResearchFrontiers implements ModInitializer {
 
     @Override
     public void onInitialize() {
-
         LibyRegistryLoader.load("nazario.researchfrontiers.registry");
 
         ServerPlayConnectionEvents.JOIN.register(ServerConnectionEvents.JOIN_EVENT.invoker());

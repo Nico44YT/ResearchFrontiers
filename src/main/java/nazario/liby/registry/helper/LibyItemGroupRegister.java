@@ -1,10 +1,7 @@
-package nazario.liby.registry;
+package nazario.liby.registry.helper;
 
-import nazario.researchfrontiers.ResearchFrontiers;
-import nazario.researchfrontiers.registry.BlockRegistry;
-import nazario.researchfrontiers.registry.ItemRegistry;
+import nazario.liby.item.LibyItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -18,9 +15,9 @@ public class LibyItemGroupRegister extends LibyRegister {
         super(namespace);
     }
 
-    public ItemGroup registerItemGroup(String name, ItemConvertible icon, Text displayName, ItemConvertible... items) {
+    public ItemGroup registerItemGroup(String id, ItemConvertible icon, Text displayName, ItemConvertible... items) {
         return Registry.register(Registries.ITEM_GROUP,
-                Identifier.of(namespace, name),
+                Identifier.of(namespace, id),
                 FabricItemGroup.builder().icon(() -> new ItemStack(icon))
                         .displayName(displayName)
                         .entries((displayContext, entries) -> {
@@ -28,6 +25,20 @@ public class LibyItemGroupRegister extends LibyRegister {
                                 entries.add(item);
                             }
                         })
-                        .special().build());
+                        .build());
+    }
+
+    public ItemGroup registerItemGroup(LibyItemGroup libyItemGroup) {
+        return Registry.register(Registries.ITEM_GROUP, Identifier.of(namespace, libyItemGroup.id), libyItemGroup.build());
+    }
+
+    public void registerItemGroups(LibyItemGroup... libyItemGroups) {
+        for(LibyItemGroup group : libyItemGroups) {
+            this.registerItemGroup(group);
+        }
+    }
+
+    public ItemGroup registerItemGroup(ItemGroup.Builder builder, String id) {
+        return Registry.register(Registries.ITEM_GROUP, Identifier.of(namespace, id), builder.build());
     }
 }

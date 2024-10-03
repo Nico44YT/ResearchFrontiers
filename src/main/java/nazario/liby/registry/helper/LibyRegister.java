@@ -1,4 +1,4 @@
-package nazario.liby.registry;
+package nazario.liby.registry.helper;
 
 public abstract class LibyRegister {
     protected final String namespace;
