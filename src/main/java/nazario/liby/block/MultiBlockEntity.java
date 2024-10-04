@@ -2,7 +2,6 @@ package nazario.liby.block;
 
 import nazario.liby.nbt.NbtCompoundBuilder;
 import nazario.liby.nbt.NbtCompoundReader;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -10,11 +9,11 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.math.BlockPos;
 
-public abstract class MultiblockEntity extends BlockEntity {
+public abstract class MultiBlockEntity extends BlockEntity {
 
     public BlockPos parentPos;
 
-    public MultiblockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+    public MultiBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
         super(type, pos, state);
     }
 

@@ -1,6 +1,5 @@
 package nazario.researchfrontiers.registry;
 
-import nazario.liby.block.MultiblockEntity;
 import nazario.liby.registry.auto.LibyAutoRegister;
 import nazario.liby.registry.helper.LibyBlockEntityRegister;
 import nazario.researchfrontiers.ResearchFrontiers;
@@ -8,8 +7,6 @@ import nazario.researchfrontiers.block.BigOvenBlockEntity;
 import nazario.researchfrontiers.block.Cable;
 import nazario.researchfrontiers.block.blast_furnace.BlastFurnaceEntity;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 
 @LibyAutoRegister(priority = 3)
 public class BlockEntityRegistry {

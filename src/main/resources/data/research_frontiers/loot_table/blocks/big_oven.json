@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "research_frontiers:big_oven"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "research_frontiers:blocks/big_oven"
+}

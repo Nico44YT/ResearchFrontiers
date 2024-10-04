@@ -10,8 +10,8 @@ import java.util.Set;
 
 public class LibyRegistryLoader {
 
-    public static void load(String path) {
-        Reflections reflections = new Reflections(path);
+    public static void load(String registryPackage) {
+        Reflections reflections = new Reflections(registryPackage);
 
         // Find all classes annotated with @AutoRegister
         Set<Class<?>> registryClasses = reflections.getTypesAnnotatedWith(LibyAutoRegister.class);

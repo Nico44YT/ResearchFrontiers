@@ -2,6 +2,7 @@ package nazario.researchfrontiers;
 
 import nazario.liby.registry.auto.LibyRegistryLoader;
 import nazario.researchfrontiers.events.ServerConnectionEvents;
+import nazario.researchfrontiers.registry.BlockRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.minecraft.util.Identifier;

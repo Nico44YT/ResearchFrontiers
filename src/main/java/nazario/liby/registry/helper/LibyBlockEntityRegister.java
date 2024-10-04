@@ -1,6 +1,5 @@
 package nazario.liby.registry.helper;
 
-import nazario.researchfrontiers.ResearchFrontiers;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
