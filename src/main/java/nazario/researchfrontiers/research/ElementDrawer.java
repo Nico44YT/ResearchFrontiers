@@ -1,7 +1,7 @@
 package nazario.researchfrontiers.research;
 
 import nazario.researchfrontiers.ResearchFrontiers;
-import nazario.liby.util.LibyDrawHelper;
+import nazario.researchfrontiers.util.LibyDrawHelper;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;

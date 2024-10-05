@@ -12,7 +12,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.sound.SoundEvents;
-import java.util.Random;@Mixin(ItemEntity.class)
+import java.util.Random;
+
+@Mixin(ItemEntity.class)
 public abstract class ItemEntityMixin {
 
     private int tickCounter = 0;

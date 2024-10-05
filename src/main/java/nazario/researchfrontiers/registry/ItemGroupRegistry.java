@@ -20,7 +20,7 @@ public class ItemGroupRegistry {
 
    public static void register() {
        RESOURCE_GROUP.addItem(ItemRegistry.FIRE_CLAY_BRICK, ItemRegistry.STEEL_INGOT, ItemRegistry.LITHIUM, BlockRegistry.WET_FIRE_CLAY_BRICK);
-       MACHINES_GROUP.addItem(BlockRegistry.BLAST_FURNACE, BlockRegistry.RESEARCH_TABLE, BlockRegistry.WORKBENCH);
+       MACHINES_GROUP.addItem(BlockRegistry.BLAST_FURNACE, BlockRegistry.RESEARCH_TABLE, BlockRegistry.LEGACY_WORKBENCH);
        BUILDING_GROUP.addItem(BlockRegistry.FIRE_CLAY_BRICKS, BlockRegistry.FIRE_CLAY_BRICKS_STAIRS, BlockRegistry.FIRE_CLAY_BRICKS_SLAB, BlockRegistry.FIRE_CLAY_BRICKS_WALL);
 
        REGISTER.registerItemGroups(RESOURCE_GROUP, MACHINES_GROUP, BUILDING_GROUP);

@@ -6,7 +6,7 @@ import nazario.researchfrontiers.ResearchFrontiers;
 import nazario.researchfrontiers.research.Element;
 import nazario.researchfrontiers.research.ElementDrawer;
 import nazario.researchfrontiers.research.Elements;
-import nazario.liby.util.LibyDrawHelper;
+import nazario.researchfrontiers.util.LibyDrawHelper;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.widget.ThreePartsLayoutWidget;
 import net.minecraft.entity.EntityType;

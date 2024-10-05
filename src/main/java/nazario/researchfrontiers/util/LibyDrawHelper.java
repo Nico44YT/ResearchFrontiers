@@ -1,4 +1,4 @@
-package nazario.liby.util;
+package nazario.researchfrontiers.util;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.MinecraftClient;

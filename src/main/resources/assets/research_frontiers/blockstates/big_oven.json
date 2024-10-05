@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=east,parent=true": {
+      "model": "research_frontiers:block/big_oven",
+      "y": 270
+    },
+    "facing=north,parent=true": {
+      "model": "research_frontiers:block/big_oven",
+      "y": 180
+    },
+    "facing=south,parent=true": {
+      "model": "research_frontiers:block/big_oven"
+    },
+    "facing=west,parent=true": {
+      "model": "research_frontiers:block/big_oven",
+      "y": 90,
+      "libyTransformX": 104
+    }
+  }
+}

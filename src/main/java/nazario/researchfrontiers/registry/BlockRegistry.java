@@ -8,6 +8,7 @@ import nazario.researchfrontiers.block.blast_furnace.BlastFurnace;
 import net.minecraft.block.*;
 import net.minecraft.item.Item;
 
+
 @LibyAutoRegister(priority = 1)
 public class BlockRegistry {
 
@@ -21,7 +22,9 @@ public class BlockRegistry {
     public static Block FIRE_CLAY_BRICKS_WALL = REGISTER.registerBlock("fire_clay_brick_wall", new WallBlock(AbstractBlock.Settings.copy(BlockRegistry.FIRE_CLAY_BRICKS).solid()), new Item.Settings());
 
     public static Block RESEARCH_TABLE = REGISTER.registerBlock("research_table", new ResearchTable(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE)), new Item.Settings());
-    public static Block WORKBENCH = REGISTER.registerBlock("workbench", new WorkbenchBlock(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE)), new Item.Settings());
+    public static Block LEGACY_WORKBENCH = REGISTER.registerBlock("workbench", new LegacyWorkbenchBlock(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE)), new Item.Settings());
+
+    public static Block WORKBENCH = REGISTER.registerBlock("new_workbench", new WorkbenchBlock(AbstractBlock.Settings.create()), new Item.Settings());
 
     public static Block BLAST_FURNACE = REGISTER.registerBlock("blast_furnace", new BlastFurnace(AbstractBlock.Settings.copy(Blocks.COBBLESTONE)), new Item.Settings());
 

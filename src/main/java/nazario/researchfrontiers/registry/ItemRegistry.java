@@ -7,7 +7,7 @@ import nazario.researchfrontiers.item.GoldPanItem;
 import nazario.researchfrontiers.item.WaterReactiveItem;
 import net.minecraft.item.Item;
 
-@LibyAutoRegister(priority = 0)
+@LibyAutoRegister
 public class ItemRegistry {
     public static final LibyItemRegister REGISTER = new LibyItemRegister(ResearchFrontiers.MOD_ID);
 
